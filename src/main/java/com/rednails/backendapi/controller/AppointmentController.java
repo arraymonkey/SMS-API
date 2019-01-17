@@ -47,10 +47,10 @@ public class AppointmentController {
 
 
     private void sendSmsMessage(AppointmentForm appointmentForm) {
-        Plivo.init("MAYZAZMDQWZTIWODM0NJ", "ZmU1YTI4NjI0MzdiOGRlNjFhM2JkNmE1OGE4NzA1");
+        Plivo.init("API-KEY", "PUBLIC-KEY");
 
         try {
-            MessageCreateResponse response = Message.creator("16122611234", Collections.singletonList("17736786394"), appointmentForm.getSmsMessage())
+            MessageCreateResponse response = Message.creator("PLIVO#", Collections.singletonList("RECIEVER#"), appointmentForm.getSmsMessage())
                     .create();
 
             System.out.println(response);
